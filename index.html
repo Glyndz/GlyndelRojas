@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glyndel A. Rojas | Sales &amp; Marketing Specialist</title>
+    <meta name="description" content="Glyndel A. Rojas — Sales & Marketing Specialist based in Davao City. B2B sales, lead generation, client relations, proposals, and marketing campaign support.">
+    <meta name="author" content="Glyndel A. Rojas">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23165DFF'/><text x='50' y='68' font-size='58' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>G</text></svg>">
+    <meta property="og:title" content="Glyndel A. Rojas | Sales & Marketing Specialist">
+    <meta property="og:description" content="Turning leads into revenue and brands into market movers. Based in Davao City, Philippines.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Glyndz.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36CBCB',
+                        dark: '#0F172A',
+                        light: '#F8FAFC',
+                        accent: '#FF7D00',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow { text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+            .gradient-text {
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                background-image: linear-gradient(90deg, #165DFF, #36CBCB);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 12px 24px rgba(22, 93, 255, 0.15);
+            }
+        }
+    </style>
+    <style>
+        html { scroll-behavior: smooth; }
+        section[id] { scroll-margin-top: 5rem; }
+        .nav-link.active { color: #165DFF; }
+        .nav-link.active::after { transform: scaleX(1); }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 2px;
+            background: #165DFF;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.25s ease;
+        }
+        .nav-link:hover::after { transform: scaleX(1); }
+    </style>
+</head>
+<body class="font-sans text-dark bg-light">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm transition-shadow">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-xl font-bold text-primary">Glyndel<span class="text-accent">.</span></a>
+            <div class="hidden lg:flex gap-8">
+                <a href="#about" class="nav-link font-medium hover:text-primary transition-colors">About</a>
+                <a href="#expertise" class="nav-link font-medium hover:text-primary transition-colors">Expertise</a>
+                <a href="#experience" class="nav-link font-medium hover:text-primary transition-colors">Experience</a>
+                <a href="#tools" class="nav-link font-medium hover:text-primary transition-colors">Tools</a>
+                <a href="#seminars" class="nav-link font-medium hover:text-primary transition-colors">Seminars</a>
+                <a href="#affiliations" class="nav-link font-medium hover:text-primary transition-colors">Affiliations</a>
+                <a href="#contact" class="nav-link font-medium hover:text-primary transition-colors">Contact</a>
+            </div>
+            <a href="#contact" class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg font-medium transition-all shadow-md hover:shadow-lg hidden lg:block">Hire Me</a>
+            <button id="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden text-dark text-xl w-10 h-10 rounded-lg hover:bg-gray-100 transition-colors">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 bg-white">
+            <div class="container mx-auto px-4 py-4 flex flex-col gap-1">
+                <a href="#about" class="mobile-link py-3 font-medium border-b border-gray-100 hover:text-primary transition-colors">About</a>
+                <a href="#expertise" class="mobile-link py-3 font-medium border-b border-gray-100 hover:text-primary transition-colors">Expertise</a>
+                <a href="#experience" class="mobile-link py-3 font-medium border-b border-gray-100 hover:text-primary transition-colors">Experience</a>
+                <a href="#tools" class="mobile-link py-3 font-medium border-b border-gray-100 hover:text-primary transition-colors">Tools</a>
+                <a href="#seminars" class="mobile-link py-3 font-medium border-b border-gray-100 hover:text-primary transition-colors">Seminars</a>
+                <a href="#affiliations" class="mobile-link py-3 font-medium border-b border-gray-100 hover:text-primary transition-colors">Affiliations</a>
+                <a href="#contact" class="mobile-link py-3 font-medium hover:text-primary transition-colors">Contact</a>
+                <a href="#contact" class="mobile-link mt-2 text-center bg-primary hover:bg-primary/90 text-white px-5 py-3 rounded-lg font-semibold transition-all">Hire Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-24 md:pt-40 md:pb-32 bg-gradient-to-br from-blue-50 to-cyan-50">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-primary font-semibold mb-3">SALES &amp; MARKETING SPECIALIST</p>
+                    <h1 class="text-[clamp(2.5rem,5vw,3.8rem)] font-extrabold leading-tight mb-6">
+                        Turning Leads Into <span class="gradient-text">Revenue &amp; Brands Into Market Movers</span>
+                    </h1>
+                    <p class="text-lg text-gray-700 mb-8 max-w-xl">
+                        I build pipelines, nurture client relationships, and deliver marketing results that fuel consistent business growth. Based in Davao City — ready to help your brand scale.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-primary hover:bg-primary/90 text-white px-8 py-3.5 rounded-lg font-semibold transition-all shadow-lg hover:shadow-xl">
+                            Let's Work Together
+                        </a>
+                        <a href="#experience" class="border-2 border-primary text-primary hover:bg-primary/5 px-8 py-3.5 rounded-lg font-semibold transition-all">
+                            View My Work
+                        </a>
+                    </div>
+                    <div class="mt-10 flex flex-wrap gap-6 text-gray-600">
+                        <div><span class="font-bold text-dark text-xl">5+</span><br>Years Experience</div>
+                        <div><span class="font-bold text-dark text-xl">B2B &amp; Gov't</span><br>Sectors Served</div>
+                        <div><span class="font-bold text-dark text-xl">100%</span><br>Dedicated &amp; Proactive</div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="w-full aspect-square max-w-md mx-auto rounded-2xl overflow-hidden shadow-2xl bg-white p-2">
+                        <div class="w-full h-full rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
+                            <div class="text-center p-8">
+                                <img src="Glyndz.jpg" alt="Portrait of Glyndel A. Rojas" width="144" height="144" class="w-36 h-36 rounded-full object-cover object-top ring-4 ring-white shadow-lg mx-auto mb-4">
+                                <h3 class="text-2xl font-bold">Glyndel A. Rojas</h3>
+                                <p class="text-gray-600 mt-2">Marketing • Sales • Growth</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 bg-accent text-white px-4 py-2 rounded-lg font-bold shadow-lg">
+                        Available for Hire ✅
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-primary font-semibold mb-2">WHO I AM</p>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold">Your Next Growth-Driven Marketing Partner</h2>
+            </div>
+            <div class="max-w-4xl mx-auto bg-gray-50 rounded-2xl p-8 md:p-10 shadow-sm">
+                <p class="text-lg leading-relaxed mb-4">
+                    I'm Glyndel A. Rojas, an organized and detail-oriented Sales &amp; Marketing professional with extensive experience across B2B sales, lead generation, client relations, and campaign support.
+                </p>
+                <p class="text-lg leading-relaxed mb-4">
+                    From building prospect pipelines to crafting winning proposals and managing CRM systems, I don't just execute tasks — I help your business connect with the right people at the right time, turning opportunities into lasting revenue.
+                </p>
+                <p class="text-lg leading-relaxed font-medium">
+                    Based in Davao City, Philippines • Ready to support local and international teams.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-primary font-semibold mb-2">WHAT I BRING TO THE TABLE</p>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold">Core Expertise</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Expertise Card -->
+                <div class="bg-white rounded-xl p-6 shadow-sm card-hover">
+                    <i class="fa fa-bullseye text-primary text-2xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">B2B Sales &amp; Lead Generation</h3>
+                    <p class="text-gray-600">Targeted prospecting, outreach, and pipeline building to uncover high-value business opportunities.</p>
+                </div>
+                <!-- Expertise Card -->
+                <div class="bg-white rounded-xl p-6 shadow-sm card-hover">
+                    <i class="fa fa-handshake-o text-primary text-2xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Client Relations &amp; Nurturing</h3>
+                    <p class="text-gray-600">Strategic follow-ups, inquiry management, and relationship building that drives repeat and referral business.</p>
+                </div>
+                <!-- Expertise Card -->
+                <div class="bg-white rounded-xl p-6 shadow-sm card-hover">
+                    <i class="fa fa-file-text text-primary text-2xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Proposals &amp; Quotations</h3>
+                    <p class="text-gray-600">Compelling, professional documents that communicate value and win client approval.</p>
+                </div>
+                <!-- Expertise Card -->
+                <div class="bg-white rounded-xl p-6 shadow-sm card-hover">
+                    <i class="fa fa-bullhorn text-primary text-2xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Marketing Campaign Support</h3>
+                    <p class="text-gray-600">Market research, email marketing, content basics, and campaign coordination to grow your brand visibility.</p>
+                </div>
+                <!-- Expertise Card -->
+                <div class="bg-white rounded-xl p-6 shadow-sm card-hover">
+                    <i class="fa fa-database text-primary text-2xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">CRM &amp; Data Management</h3>
+                    <p class="text-gray-600">Accurate tracking, clean records, and actionable insights to keep your sales process efficient.</p>
+                </div>
+                <!-- Expertise Card -->
+                <div class="bg-white rounded-xl p-6 shadow-sm card-hover">
+                    <i class="fa fa-cogs text-primary text-2xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Operations &amp; Admin Excellence</h3>
+                    <p class="text-gray-600">Streamlined documentation, scheduling, reporting, and coordination so your team stays focused on growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-primary font-semibold mb-2">MY PROFESSIONAL JOURNEY</p>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold">Experience That Delivers Results</h2>
+            </div>
+            <div class="max-w-4xl mx-auto space-y-10">
+                <!-- Role 1 -->
+                <div class="border-l-4 border-primary pl-6 py-2">
+                    <span class="text-primary font-semibold">Big Black Panda Co. &amp; Affiliates</span>
+                    <h3 class="text-xl font-bold mt-1">Sales &amp; Marketing Associate</h3>
+                    <p class="text-gray-500 mb-3">Davao City</p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i> Conducted market research &amp; identified potential clients to fuel lead generation</li>
+                        <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i> Managed client inquiries, follow-ups, and relationship building</li>
+                        <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i> Prepared proposals &amp; supported marketing campaigns</li>
+                        <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i> Tracked sales progress &amp; gathered feedback to refine strategies</li>
+                    </ul>
+                </div>
+                <!-- Role 2 -->
+                <div class="border-l-4 border-secondary pl-6 py-2">
+                    <span class="text-secondary font-semibold">Dwightsteel Building Systems, Inc.</span>
+                    <h3 class="text-xl font-bold mt-1">Sales &amp; Marketing Executive</h3>
+                    <p class="text-gray-500 mb-3">Davao City</p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i> Grew B2B client base through direct outreach &amp; personalized engagement</li>
+                        <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i> Monitored quotations &amp; coordinated follow-ups to advance deals</li>
+                        <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i> Conducted market research &amp; client visits to uncover new opportunities</li>
+                    </ul>
+                </div>
+                <!-- Role 3 -->
+                <div class="border-l-4 border-accent pl-6 py-2">
+                    <span class="text-accent font-semibold">Felcris Centrale</span>
+                    <h3 class="text-xl font-bold mt-1">Operations Assistant / Administrative Aide</h3>
+                    <p class="text-gray-500 mb-3">Davao City</p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i> Prepared quotations, POs, reports &amp; business documents</li>
+                        <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i> Coordinated with tenants, teams &amp; service providers</li>
+                        <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i> Supported senior management with reporting &amp; records management</li>
+                    </ul>
+                </div>
+                <!-- Role 4 & 5 -->
+                <div class="border-l-4 border-gray-300 pl-6 py-2">
+                    <span class="text-gray-500 font-semibold">Local Government Unit / GenSan Gov't Employees Association</span>
+                    <h3 class="text-xl font-bold mt-1">Monitoring Specialist • Secretary • Administrative Aide</h3>
+                    <p class="text-gray-500 mb-3">Bislig City / General Santos City</p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i> Coordinated across offices &amp; barangays; prepared reports &amp; maintained records</li>
+                        <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i> Managed inquiries, meetings, filing, encoding &amp; document processing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-primary font-semibold mb-2">MY TOOLKIT</p>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold">Tools &amp; Platforms I Use</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                    <h3 class="font-bold text-lg mb-4">Marketing &amp; CRM</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center gap-4">
+                            <span class="flex items-center gap-3">
+                                <img src="https://www.google.com/s2/favicons?domain=hubspot.com&amp;sz=256" alt="HubSpot logo" width="32" height="32" loading="lazy" class="w-8 h-8 object-contain shrink-0">
+                                <span class="font-medium">HubSpot</span>
+                            </span>
+                            <span class="text-primary text-sm text-right">Working Knowledge</span>
+                        </li>
+                        <li class="flex justify-between items-center gap-4">
+                            <span class="flex items-center gap-3">
+                                <img src="https://www.google.com/s2/favicons?domain=mailchimp.com&amp;sz=256" alt="Mailchimp logo" width="32" height="32" loading="lazy" class="w-8 h-8 object-contain shrink-0">
+                                <span class="font-medium">Mailchimp</span>
+                            </span>
+                            <span class="text-primary text-sm text-right">Proficient</span>
+                        </li>
+                        <li class="flex justify-between items-center gap-4">
+                            <span class="flex items-center gap-3">
+                                <img src="https://www.google.com/s2/favicons?domain=klaviyo.com&amp;sz=256" alt="Klaviyo logo" width="32" height="32" loading="lazy" class="w-8 h-8 object-contain shrink-0">
+                                <span class="font-medium">Klaviyo</span>
+                            </span>
+                            <span class="text-primary text-sm text-right">Basic</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                    <h3 class="font-bold text-lg mb-4">Design &amp; Content</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center gap-4">
+                            <span class="flex items-center gap-3">
+                                <img src="https://www.google.com/s2/favicons?domain=canva.com&amp;sz=256" alt="Canva logo" width="32" height="32" loading="lazy" class="w-8 h-8 object-contain shrink-0">
+                                <span class="font-medium">Canva</span>
+                            </span>
+                            <span class="text-primary text-sm text-right">Beginner</span>
+                        </li>
+                        <li class="flex justify-between items-center gap-4">
+                            <span class="flex items-center gap-3">
+                                <img src="https://www.google.com/s2/favicons?domain=capcut.com&amp;sz=256" alt="CapCut logo" width="32" height="32" loading="lazy" class="w-8 h-8 object-contain shrink-0">
+                                <span class="font-medium">CapCut</span>
+                            </span>
+                            <span class="text-primary text-sm text-right">Basic Video Editing</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                    <h3 class="font-bold text-lg mb-4">Productivity &amp; Collaboration</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center gap-4">
+                            <span class="flex items-center gap-3">
+                                <img src="https://www.google.com/s2/favicons?domain=google.com&amp;sz=256" alt="Google Workspace logo" width="32" height="32" loading="lazy" class="w-8 h-8 object-contain shrink-0">
+                                <span class="font-medium">Google Workspace</span>
+                            </span>
+                            <span class="text-primary text-sm text-right">Proficient</span>
+                        </li>
+                        <li class="flex justify-between items-center gap-4">
+                            <span class="flex items-center gap-3">
+                                <img src="https://www.google.com/s2/favicons?domain=office.com&amp;sz=256" alt="Microsoft Office logo" width="32" height="32" loading="lazy" class="w-8 h-8 object-contain shrink-0">
+                                <span class="font-medium">Microsoft Office</span>
+                            </span>
+                            <span class="text-primary text-sm text-right">Proficient</span>
+                        </li>
+                        <li class="flex justify-between items-center gap-4">
+                            <span class="flex items-center gap-3">
+                                <img src="https://www.google.com/s2/favicons?domain=notion.so&amp;sz=256" alt="Notion logo" width="32" height="32" loading="lazy" class="w-8 h-8 object-contain shrink-0">
+                                <span class="font-medium">Notion</span>
+                            </span>
+                            <span class="text-primary text-sm text-right">Proficient</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                    <h3 class="font-bold text-lg mb-4">Education</h3>
+                    <p class="text-gray-600 mb-2">BS Business Administration — Marketing Management</p>
+                    <p class="text-sm text-gray-500">De La Salle John Bosco College, 2013–2019</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seminars Section -->
+    <section id="seminars" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-primary font-semibold mb-2">PROFESSIONAL DEVELOPMENT</p>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold">Seminars &amp; Training</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                <!-- Seminar 1 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm card-hover border-l-4 border-primary">
+                    <h3 class="text-lg font-bold mb-1">BOS: Seminar on Public Sector Unionism</h3>
+                    <p class="text-gray-600 text-sm">General Santos City Government Employees Association</p>
+                    <p class="text-gray-500 text-sm mt-2"><i class="fa fa-map-marker mr-2"></i>Dolores Tropicana Resort, General Santos City</p>
+                    <p class="text-primary text-sm font-medium mt-1"><i class="fa fa-calendar-o mr-2"></i>March 8–10, 2022</p>
+                </div>
+                <!-- Seminar 2 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm card-hover border-l-4 border-secondary">
+                    <h3 class="text-lg font-bold mb-1">Kavanah Haven Resort Seminar Training Workshop</h3>
+                    <p class="text-gray-600 text-sm">Management and Operations in Kitchen, Food and Beverage, Housekeeping, and Front Office</p>
+                    <p class="text-gray-500 text-sm mt-2"><i class="fa fa-map-marker mr-2"></i>Kavanah Haven Resort, Kitaotao, Lorega, Bukidnon</p>
+                    <p class="text-secondary text-sm font-medium mt-1"><i class="fa fa-calendar-o mr-2"></i>April 16–18, 2023</p>
+                </div>
+                <!-- Seminar 3 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm card-hover border-l-4 border-accent">
+                    <h3 class="text-lg font-bold mb-1">10th Caraga Business Student Congress</h3>
+                    <p class="text-gray-500 text-sm mt-2"><i class="fa fa-map-marker mr-2"></i>Balanghai Hotel and Resort, Butuan City</p>
+                    <p class="text-accent text-sm font-medium mt-1"><i class="fa fa-calendar-o mr-2"></i>February 5, 2016</p>
+                </div>
+                <!-- Seminar 4 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm card-hover border-l-4 border-primary">
+                    <h3 class="text-lg font-bold mb-1">Road to Financial Freedom</h3>
+                    <p class="text-gray-500 text-sm mt-2"><i class="fa fa-map-marker mr-2"></i>De La Salle John Bosco College, Mangagoy, Bislig City</p>
+                    <p class="text-primary text-sm font-medium mt-1"><i class="fa fa-calendar-o mr-2"></i>August 14, 2015</p>
+                </div>
+                <!-- Seminar 5 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm card-hover border-l-4 border-secondary">
+                    <h3 class="text-lg font-bold mb-1">Human Resource Management Seminar</h3>
+                    <p class="text-gray-500 text-sm mt-2"><i class="fa fa-map-marker mr-2"></i>De La Salle John Bosco College, Mangagoy, Bislig City</p>
+                    <p class="text-secondary text-sm font-medium mt-1"><i class="fa fa-calendar-o mr-2"></i>August 14, 2015</p>
+                </div>
+                <!-- Seminar 6 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm card-hover border-l-4 border-accent">
+                    <h3 class="text-lg font-bold mb-1">Business and Industry Study Tour</h3>
+                    <p class="text-gray-500 text-sm mt-2"><i class="fa fa-map-marker mr-2"></i>Cebu City</p>
+                    <p class="text-accent text-sm font-medium mt-1"><i class="fa fa-calendar-o mr-2"></i>September 29 – October 1, 2015</p>
+                    <p class="text-gray-600 text-sm font-medium mt-4 mb-2">Participating establishments and organizations:</p>
+                    <ul class="space-y-1.5 text-gray-700 text-sm">
+                        <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i> GT Cosmetic Manufacturing Inc.</li>
+                        <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i> The Philippine Stock Exchange (PSE)</li>
+                        <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i> Korlanda Corporation</li>
+                        <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i> Gardenia Bakeries Philippines, Inc.</li>
+                        <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i> Ayala Marketing Center</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliations Section -->
+    <section id="affiliations" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-primary font-semibold mb-2">COMMUNITY &amp; LEADERSHIP</p>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold">Affiliations &amp; Leadership</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <!-- Affiliation 1 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm card-hover">
+                    <i class="fa fa-users text-primary text-2xl mb-4"></i>
+                    <h3 class="text-lg font-bold mb-1">Rotaract Club of Mangagoy</h3>
+                    <p class="text-gray-600 text-sm">Member | De La Salle John Bosco College</p>
+                    <p class="text-gray-500 text-sm mt-2">Bislig City</p>
+                    <p class="text-primary text-sm font-medium mt-1">2014–2019</p>
+                </div>
+                <!-- Affiliation 2 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm card-hover">
+                    <i class="fa fa-briefcase text-primary text-2xl mb-4"></i>
+                    <h3 class="text-lg font-bold mb-1">Junior Executive Club (JEC)</h3>
+                    <p class="text-gray-600 text-sm">Member | De La Salle John Bosco College</p>
+                    <p class="text-gray-500 text-sm mt-2">Bislig City</p>
+                    <p class="text-primary text-sm font-medium mt-1">2015–2019</p>
+                </div>
+                <!-- Affiliation 3 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm card-hover">
+                    <i class="fa fa-microphone text-primary text-2xl mb-4"></i>
+                    <h3 class="text-lg font-bold mb-1">Speaker and Facilitator</h3>
+                    <p class="text-gray-600 text-sm">BOS: Seminar on Public Sector Unionism</p>
+                    <p class="text-gray-500 text-sm mt-2"><i class="fa fa-map-marker mr-2"></i>Dolores Tropicana Resort, General Santos City</p>
+                    <p class="text-primary text-sm font-medium mt-1"><i class="fa fa-calendar-o mr-2"></i>March 8–10, 2022</p>
+                </div>
+            </div>
+            <!-- Languages -->
+            <div class="max-w-5xl mx-auto mt-8 bg-white rounded-xl p-6 shadow-sm text-center">
+                <h3 class="font-bold text-lg mb-4"><i class="fa fa-language text-primary mr-2"></i>Languages</h3>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium">English</span>
+                    <span class="bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium">Filipino</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-secondary font-semibold mb-2">READY TO GROW?</p>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold">Let's Build Your Success Together</h2>
+                <p class="mt-4 text-gray-300">I'm currently available for new opportunities. Reach out and let's discuss how I can contribute to your team's growth.</p>
+            </div>
+            <div class="max-w-2xl mx-auto bg-white/5 rounded-2xl p-8 md:p-10 backdrop-blur-sm border border-white/10">
+                <div class="space-y-6 text-center">
+                    <div>
+                        <p class="text-gray-400 text-sm uppercase tracking-wider">Email</p>
+                        <a href="mailto:rojasglyndz@gmail.com" class="text-xl font-medium hover:text-secondary transition-colors break-all">rojasglyndz@gmail.com</a>
+                    </div>
+                    <div>
+                        <p class="text-gray-400 text-sm uppercase tracking-wider">Phone / WhatsApp</p>
+                        <a href="tel:+639912950665" class="text-xl font-medium hover:text-secondary transition-colors">+63 991 295 0665</a>
+                    </div>
+                    <div>
+                        <p class="text-gray-400 text-sm uppercase tracking-wider">Location</p>
+                        <p class="text-xl font-medium">Davao City, Philippines</p>
+                    </div>
+                    <div class="pt-4">
+                        <a href="mailto:rojasglyndz@gmail.com" class="inline-block bg-primary hover:bg-primary/90 text-white px-8 py-3.5 rounded-lg font-semibold transition-all shadow-lg">
+                            Send Me an Email <i class="fa fa-paper-plane ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-8 border-t border-white/10">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            <p>© 2026 Glyndel A. Rojas. All rights reserved.</p>
+            <p class="mt-2 text-sm">Dedicated to driving growth through strategic sales &amp; marketing.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = menuToggle.querySelector('i');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            menuToggle.setAttribute('aria-expanded', String(!isOpen));
+            menuIcon.classList.toggle('fa-bars', isOpen);
+            menuIcon.classList.toggle('fa-times', !isOpen);
+        });
+
+        // Close the mobile menu after choosing a link
+        document.querySelectorAll('.mobile-link').forEach((link) => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuIcon.classList.add('fa-bars');
+                menuIcon.classList.remove('fa-times');
+            });
+        });
+
+        // Elevate the navbar once the page is scrolled
+        const navbar = document.getElementById('navbar');
+        const onScroll = () => navbar.classList.toggle('shadow-lg', window.scrollY > 10);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        // Highlight the section currently in view
+        const navLinks = [...document.querySelectorAll('.nav-link')];
+        const sections = navLinks
+            .map((link) => document.querySelector(link.getAttribute('href')))
+            .filter(Boolean);
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                navLinks.forEach((link) => {
+                    link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                });
+            });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+
+        sections.forEach((section) => observer.observe(section));
+    </script>
+</body>
+</html>
